@@ -3,22 +3,29 @@ class Processor
     @input_file = input_file
     @output_dir = output_dir
     check_params
-    open_file
+    read_input_file
   end
 
+  ## MAIN FUNCION ##
+  def abracadabra
+  end
+
+  def works
+    @works
+  end
+
+private
   def check_params
     raise NoInputFileError if @input_file.nil?
     raise NoOutputDirError if @output_dir.nil?
   end
 
-  def open_file
+  def read_input_file
     @file = File.open(@input_file, "r")
-  end
-
-  
-
-  ## MAIN FUNCION ##
-  def abracadabra
+    doc = Nokogiri::XML(@file) do |config|
+      config.noblanks
+    end
+    @works = doc.child
   end
 end
 
