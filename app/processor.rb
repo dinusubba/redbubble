@@ -22,10 +22,16 @@ private
 
   def read_input_file
     @file = File.open(@input_file, "r")
-    doc = Nokogiri::XML(@file) do |config|
+    @doc = Nokogiri::XML(@file) do |config|
       config.noblanks
     end
-    @works = doc.child
+    @works = @doc.child
+  end
+
+  def process_works
+    @works.children.each do |work|
+      # Work.new
+    end
   end
 end
 
