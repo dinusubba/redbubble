@@ -12,5 +12,7 @@ describe Works do
     let!(:works) { Works.new(f) }
 
     it { expect(works.works.count).to eq 14 }
+    it { expect(works.uniq_make.count).to eq 7 }
+    it { expect(works.uniq_model.count).to eq 8 }
   end
 end
