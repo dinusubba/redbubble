@@ -54,5 +54,6 @@ PLATFORMS
 DEPENDENCIES
   guard
   guard-rspec
+  pry
   rake
   rspec
