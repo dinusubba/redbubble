@@ -1,13 +1,13 @@
 class Processor
-  def initialize(input_file=nil, output_dir=nil)
+  def initialize(input_file, output_dir)
     @input_file = input_file
     @output_dir = output_dir
-    check_params
-    read_input_file
+    process_args
   end
 
   ## MAIN FUNCION ##
   def abracadabra
+    process_works
   end
 
   def works
@@ -15,13 +15,10 @@ class Processor
   end
 
 private
-  def check_params
-    raise NoInputFileError if @input_file.nil?
-    raise NoOutputDirError if @output_dir.nil?
-  end
-
-  def read_input_file
+  def process_args
     @file = File.open(@input_file, "r")
+    raise InvalidInputFileError unless @file
+
     @doc = Nokogiri::XML(@file) do |config|
       config.noblanks
     end
@@ -29,17 +26,14 @@ private
   end
 
   def process_works
+    @children = []
     @works.children.each do |work|
-      # Work.new
+      @children << Work.new(work)
     end
   end
 end
 
 class ProcessorError < StandardError
-end
-class NoInputFileError < ProcessorError
-end
-class NoOutputDirError < ProcessorError
 end
 class InvalidInputFileError < ProcessorError
 end

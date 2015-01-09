@@ -11,9 +11,9 @@ describe Work do
             xml.image_width "2206"
             xml.image_height "2205"
             xml.urls {
-              xml.url(:type => "small") { 'http://small' }
-              xml.url(:type => "medium") { 'http://medium' }
-              xml.url(:type => "large") { 'http://large' }
+              xml.url('type' => "small") { xml.text 'http://small' }
+              xml.url('type' => "medium") { xml.text 'http://medium' }
+              xml.url('type' => "large") { xml.text 'http://large' }
             }
             xml.exif {
               xml.model "NIKON D80"
@@ -33,5 +33,6 @@ describe Work do
     it { expect(work.id).to eq 1234 }
     it { expect(work.make).to eq "NIKON CORPORATION" }
     it { expect(work.model).to eq "NIKON D80" }
+    it { expect(work.image_url).to eq "http://large" }
   end
 end
