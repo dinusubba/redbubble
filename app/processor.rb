@@ -10,25 +10,30 @@ class Processor
     process_works
   end
 
-  def works
-    @works
+  def works_count
+    @works.count
   end
 
 private
   def process_args
-    @file = File.open(@input_file, "r")
-    raise InvalidInputFileError unless @file
+    begin
+      @file = File.open(@input_file, "r")
+    rescue Errno::ENOENT
+      raise InvalidInputFileError, "Invalid Input File"
+    end
 
     @doc = Nokogiri::XML(@file) do |config|
       config.noblanks
     end
-    @works = @doc.child
+    @works = []
+    @doc.child.children.each do |child_node|
+      @works << Work.new(child_node)
+    end
   end
 
-  def process_works
-    @children = []
-    @works.children.each do |work|
-      @children << Work.new(work)
+  def get_all_make
+    @all_make = []
+    @works.each do |work|
     end
   end
 end
