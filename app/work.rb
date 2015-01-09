@@ -6,6 +6,7 @@ class Work
     read_xml_doc
   end
 
+private
   def read_xml_doc
     @id = get_id
     @image_url = get_image_url

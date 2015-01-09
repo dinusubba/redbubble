@@ -1,40 +1,21 @@
 class Processor
-  def initialize(input_file, output_dir)
+  def self.process(input_file, output_dir)
     @input_file = input_file
     @output_dir = output_dir
     process_args
   end
 
-  ## MAIN FUNCION ##
-  def abracadabra
-    process_works
-  end
-
-  def works_count
-    @works.count
-  end
-
 private
-  def process_args
+  def self.process_args
     begin
       @file = File.open(@input_file, "r")
     rescue Errno::ENOENT
       raise InvalidInputFileError, "Invalid Input File"
     end
 
-    @doc = Nokogiri::XML(@file) do |config|
-      config.noblanks
-    end
-    @works = []
-    @doc.child.children.each do |child_node|
-      @works << Work.new(child_node)
-    end
-  end
+    # TODO: check output dir
 
-  def get_all_make
-    @all_make = []
-    @works.each do |work|
-    end
+    Works.new @file
   end
 end
 
