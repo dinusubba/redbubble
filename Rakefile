@@ -15,5 +15,8 @@ task :process, [:input_file,:output_dir] do |t, args|
     :input_file => "./works.xml",
     :output_dir => "./html"
   )
-  # Process
+  puts "Processing #{args[:input_file]}"
+  puts "Output Dir #{args[:output_dir]}"
+
+  # Process something here!!
 end
