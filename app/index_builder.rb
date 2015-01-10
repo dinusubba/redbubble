@@ -23,7 +23,7 @@ class IndexBuilder
 
   def thumbs
     html = "<div class=\"thumbs\">"
-    @works.works.take(10).each do |work|
+    @works.works.first(10).each do |work|
       html << "<div class=\"thumb\">"
       html << "<img src=\"#{work.image_url}\"></img>"
       html << "</div>"
