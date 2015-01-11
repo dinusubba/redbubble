@@ -5,13 +5,16 @@ class Processor
 
     @works = Works.new @file
 
+    # Magic happens here
     abracadabra
+
+    puts "Done..!"
   end
 
 private
   def self.process_args(input_file, output_dir)
     begin
-      @file = File.open(input_file, "r")
+      @file = File.open(File.expand_path(input_file), "r")
     rescue Errno::ENOENT
       raise InvalidInputFileError, "Invalid Input File"
     end
