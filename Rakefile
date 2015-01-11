@@ -6,10 +6,12 @@ require './application'
 
 task :default => :process
 
+desc "Run all tests"
 task :test do
   sh "bundle exec rspec ."
 end
 
+desc "Compiles an XML file into static html file in output dir"
 task :process, [:input_file,:output_dir] do |t, args|
   args.with_defaults(
     :input_file => "./works.xml",
