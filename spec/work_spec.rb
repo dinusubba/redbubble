@@ -10,6 +10,7 @@ describe Work do
 
   context 'parse' do
     let!(:builder) {
+      ########## TODO: USE FIXTURE ##########
       Nokogiri::XML::Builder.new do |xml|
         xml.works{
           xml.work {

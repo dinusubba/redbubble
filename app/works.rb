@@ -12,6 +12,7 @@ class Works
   def models(make=nil)
     arr = []
     @all_work.each do |work|
+      # don't want blank model
       next if work.model.empty?
       if make # if filtered by make
         arr << work.model if work.make == make
@@ -26,6 +27,7 @@ class Works
   def makes
     arr = []
     @all_work.each do |work|
+      # don't want blank make
       next if work.make.empty?
       arr << work.make
     end
@@ -37,13 +39,14 @@ class Works
     all_work.each do |work|
       return work.make if work.model == model
     end
+    ""
   end
 
   def image_urls(count=10)
     arr = []
     all_work.each do |work|
       arr << work.image_url
-      break if arr.size == count
+      break if arr.size == count && count != 0
     end
     arr
   end
@@ -53,7 +56,7 @@ class Works
     arr = []
     all_work.each do |work|
       arr << work.image_url if work.make == make
-      break if arr.size == count
+      break if arr.size == count && count != 0
     end
     arr
   end
