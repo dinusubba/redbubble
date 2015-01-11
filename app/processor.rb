@@ -7,8 +7,6 @@ class Processor
 
     # Magic happens here
     abracadabra
-
-    puts "Done..!"
   end
 
 private

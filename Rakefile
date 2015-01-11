@@ -22,4 +22,6 @@ task :process, [:input_file,:output_dir] do |t, args|
 
   # Process something here!!
   Processor.process(args[:input_file], args[:output_dir])
+
+  puts "Done..!"
 end
