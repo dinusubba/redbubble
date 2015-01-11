@@ -19,8 +19,8 @@ private
 
     begin
       @output_dir = File.expand_path(output_dir)
-      unless File.directory?(output_dir)
-        FileUtils.mkdir_p(output_dir)
+      unless File.directory?(@output_dir)
+        FileUtils.mkdir_p(@output_dir)
       end
     rescue Errno::EEXIST
       raise OutputDirError, "Invalid Output Directory"
