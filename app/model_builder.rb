@@ -4,21 +4,14 @@ class ModelBuilder
   def initialize(works, model)
     @works = works
     @model = model
-    @works.works.each do |work|
-      if work.model == @model
-        @make = work.make
-        break
-      end
-    end
+    @make = @works.make_of_model(@model)
   end
 
   def title
-    "#{@model}"
+    "Redbubble | #{@make} | #{@model}"
   end
 
   # Navigation that allows the user to browse to the index page and the camera make
-  ######### RED ALERT HERE ############
-  ######## MAKE CAMERA MAKE ACCESSIBLE
   def nav
     html = ""
     html << HtmlHelper.index_button
@@ -27,14 +20,9 @@ class ModelBuilder
   end
 
   # Thumbnail images of all works for that camera make and model
-  ######### RED ALERT HERE ############
   def thumbs
-    image_urls = []
-    @works.works.each do |work|
-      next unless work.model == @model
-      image_urls << work.image_url
-    end
     html = ""
+    image_urls = @works.image_urls_of_make_model(@make, @model)
     image_urls.each do |image_url|
       html << HtmlHelper.single_img(image_url)
     end

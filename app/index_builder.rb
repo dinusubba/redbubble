@@ -6,14 +6,14 @@ class IndexBuilder
   end
 
   def title
-    "Index"
+    "Redbubble | Index"
   end
 
   # Navigation that allows the user to browse to all camera makes
   def nav
     html = ""
     html << HtmlHelper.index_button(false)
-    @works.uniq_make.each do |make|
+    @works.makes.each do |make|
       next if make.empty?
       html << HtmlHelper.single_button_link(make)
     end
@@ -23,8 +23,8 @@ class IndexBuilder
   # Thumbnail images for the first 10 work
   def thumbs
     html = ""
-    @works.works.first(10).each do |work|
-      html << HtmlHelper.single_img(work.image_url)
+    @works.image_urls.each do |image_url|
+      html << HtmlHelper.single_img(image_url)
     end
     HtmlHelper.wrap_in_block_ul html
   end

@@ -2,6 +2,13 @@ require 'spec_helper'
 
 describe Work do
   context 'new' do
+    it 'must have 1 argument' do
+      expect{Works.new}.to raise_error ArgumentError
+      expect(Works.new("").class).to eq Works
+    end
+  end
+
+  context 'parse' do
     let!(:builder) {
       Nokogiri::XML::Builder.new do |xml|
         xml.works{

@@ -11,8 +11,10 @@ describe Works do
   context 'parse_xml' do
     let!(:works) { Works.new(f) }
 
-    it { expect(works.works.count).to eq 14 }
-    it { expect(works.uniq_make.count).to eq 7 }
-    it { expect(works.uniq_model.count).to eq 8 }
+    it { expect(works.all_work.count).to eq 14 }
+    it { expect(works.uniq_make.count).to eq 6 }
+    it { expect(works.uniq_model.count).to eq 7 }
+    it { expect(works.all_make.count).to eq 12 }
+    it { expect(works.all_model.count).to eq 12 }
   end
 end
