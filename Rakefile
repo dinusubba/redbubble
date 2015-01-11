@@ -4,7 +4,7 @@ require 'rake/clean'
 require 'rake/testtask'
 require './application'
 
-task :default => :test
+task :default => :process
 
 task :test do
   sh "bundle exec rspec ."
@@ -19,4 +19,5 @@ task :process, [:input_file,:output_dir] do |t, args|
   puts "Output Dir #{args[:output_dir]}"
 
   # Process something here!!
+  Processor.process(args[:input_file], args[:output_dir])
 end

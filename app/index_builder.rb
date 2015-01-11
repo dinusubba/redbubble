@@ -9,25 +9,23 @@ class IndexBuilder
     "Index"
   end
 
+  # Navigation that allows the user to browse to all camera makes
   def nav
-    html = "<div class=\"nav\"><ul>"
+    html = ""
+    html << HtmlHelper.index_button(false)
     @works.uniq_make.each do |make|
-      html << "<li>"
-      html << "<a href=\"#{make.downcase.gsub(' ','_')}.html\">"
-      html << "#{make}"
-      html << "</a>"
-      html << "</li>"
+      next if make.empty?
+      html << HtmlHelper.single_button_link(make)
     end
-    html << "</ul></div>"
+    HtmlHelper.wrap_in_button_group(html)
   end
 
+  # Thumbnail images for the first 10 work
   def thumbs
-    html = "<div class=\"thumbs\">"
+    html = ""
     @works.works.first(10).each do |work|
-      html << "<div class=\"thumb\">"
-      html << "<img src=\"#{work.image_url}\"></img>"
-      html << "</div>"
+      html << HtmlHelper.single_img(work.image_url)
     end
-    html << "</div>"
+    HtmlHelper.wrap_in_block_ul html
   end
 end
