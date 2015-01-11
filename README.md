@@ -15,6 +15,9 @@ RedBubble Code Challenge
 
     bundle exec rake[input_xml,output_dir]
 
+    example:
+    bundle exec rake[~/temp/works.xml, ~/temp/html]
+
 ## Note
 
     Make sure the output_dir is writable and empty
