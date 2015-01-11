@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Processor do
   describe 'process' do
-    let!(:input_file) { './works.xml' }
+    let!(:input_file) { './spec/data/works.xml' }
     let!(:output_dir) { './test_html' }
     let!(:invalid_input_file) { './lalala.xml' }
 

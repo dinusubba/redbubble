@@ -1,28 +1,7 @@
 require 'spec_helper'
 
 describe IndexBuilder do
-    let!(:xml) { %(
-<works>
-  <work>
-    <urls>
-      <url type="large">http://url_1.jpg</url>
-    </urls>
-    <exif>
-      <model>NIKON D80</model>
-      <make>NIKON CORPORATION</make>
-    </exif>
-  </work>
-  <work>
-    <urls>
-      <url type="large">http://url_2.jpg</url>
-    </urls>
-    <exif>
-      <model>Canon EOS 20D</model>
-      <make>Canon</make>
-    </exif>
-  </work>
-</works>
-    )}
+  let!(:xml) { File.open('./spec/data/2_work.xml') }
   let!(:works) { Works.new(xml) }
 
   describe 'new' do
@@ -47,7 +26,7 @@ describe IndexBuilder do
 
     context 'thumbs' do
       let!(:expected_thumbs) {
-        "<ul class=\"small-block-grid-2 large-block-grid-5\"><li><img class=\"th\" src=\"http://url_1.jpg\"></img></li><li><img class=\"th\" src=\"http://url_2.jpg\"></img></li></ul>"
+        "<ul class=\"small-block-grid-2 large-block-grid-5\"><li><img class=\"th\" src=\"http://ih1.redbubble.net/work.31820.1.flat,550x550,075,f.jpg\"></img></li><li><img class=\"th\" src=\"http://ih1.redbubble.net/work.2041.1.flat,550x550,075,f.jpg\"></img></li></ul>"
       }
 
       it { expect(index_builder.thumbs).to eq expected_thumbs }

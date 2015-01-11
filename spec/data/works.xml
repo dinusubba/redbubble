@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<works>
+  <work>
+    <id>1</id>
+    <urls>
+      <url type="large">http://somewhere/1.jpg</url>
+    </urls>
+    <exif>
+      <make>MAKE 1</make>
+      <model>MAKE 1MODEL 1</model>
+    </exif>
+  </work>
+  <work>
+    <id>2</id>
+    <urls>
+      <url type="large">http://somewhere/2.jpg</url>
+    </urls>
+    <exif>
+      <make>MAKE 1</make>
+      <model>MAKE 1MODEL 2</model>
+    </exif>
+  </work>
+  <work>
+    <id>3</id>
+    <urls>
+      <url type="large">http://somewhere/3.jpg</url>
+    </urls>
+    <exif>
+      <make>MAKE 1</make>
+      <model>MAKE 1MODEL 3</model>
+    </exif>
+  </work>
+  <work>
+    <id>4</id>
+    <urls>
+      <url type="large">http://somewhere/4.jpg</url>
+    </urls>
+    <exif>
+      <make>MAKE 4</make>
+      <model>MAKE 4MODEL 1</model>
+    </exif>
+  </work>
+  <work>
+    <id>5</id>
+    <urls>
+      <url type="large">http://somewhere/5.jpg</url>
+    </urls>
+    <exif>
+      <make>MAKE 3</make>
+      <model>MAKE 3MODEL 2</model>
+    </exif>
+  </work>
+  <work>
+    <id>6</id>
+    <urls>
+      <url type="large">http://somewhere/6.jpg</url>
+    </urls>
+    <exif>
+      <make>MAKE 3</make>
+      <model>MAKE 3MODEL 1</model>
+    </exif>
+  </work>
+  <work>
+    <id>7</id>
+    <urls>
+      <url type="large">http://somewhere/7.jpg</url>
+    </urls>
+    <exif>
+      <make>MAKE 2</make>
+      <model>MAKE 2MODEL 2</model>
+    </exif>
+  </work>
+  <work>
+    <id>8</id>
+    <urls>
+      <url type="large">http://somewhere/8.jpg</url>
+    </urls>
+    <exif>
+      <make>MAKE 1</make>
+      <model>MAKE 1MODEL 1</model>
+    </exif>
+  </work>
+  <work>
+    <id>9</id>
+    <urls>
+      <url type="large">http://somewhere/9.jpg</url>
+    </urls>
+    <exif>
+      <make>MAKE 1</make>
+      <model>MAKE 1MODEL 1</model>
+    </exif>
+  </work>
+  <work>
+    <id>10</id>
+    <urls>
+      <url type="large">http://somewhere/10.jpg</url>
+    </urls>
+    <exif>
+      <make>MAKE 1</make>
+      <model>MAKE 1MODEL 1</model>
+    </exif>
+  </work>
+  <work>
+    <id>11</id>
+    <urls>
+      <url type="large">http://somewhere/11.jpg</url>
+    </urls>
+    <exif>
+      <make>MAKE 1</make>
+      <model>MAKE 1MODEL 1</model>
+    </exif>
+  </work>
+  <work>
+    <id>12</id>
+    <urls>
+      <url type="large">http://somewhere/12.jpg</url>
+    </urls>
+    <exif>
+      <make>MAKE 1</make>
+      <model>MAKE 1MODEL 1</model>
+    </exif>
+  </work>
+  <work>
+    <id>13</id>
+    <urls>
+      <url type="large">http://somewhere/13.jpg</url>
+    </urls>
+    <exif>
+      <make>MAKE 1</make>
+      <model>MAKE 1MODEL 1</model>
+    </exif>
+  </work>
+  <work>
+    <id>14</id>
+    <urls>
+      <url type="large">http://somewhere/14.jpg</url>
+    </urls>
+    <exif>
+      <make>MAKE 1</make>
+      <model>MAKE 1MODEL 1</model>
+    </exif>
+  </work>
+  <work>
+    <id>15</id>
+    <urls>
+      <url type="large">http://somewhere/15.jpg</url>
+    </urls>
+    <exif>
+      <make>MAKE 1</make>
+      <model>MAKE 1MODEL 1</model>
+    </exif>
+  </work>
+  <work>
+    <id>16</id>
+    <urls>
+      <url type="large">http://somewhere/16.jpg</url>
+    </urls>
+    <exif>
+      <make>MAKE 1</make>
+      <model>MAKE 1MODEL 1</model>
+    </exif>
+  </work>
+  <work>
+    <id>17</id>
+    <urls>
+      <url type="large">http://somewhere/17.jpg</url>
+    </urls>
+    <exif>
+      <make>MAKE 1</make>
+      <model>MAKE 1MODEL 1</model>
+    </exif>
+  </work>
+  <work>
+    <id>18</id>
+    <urls>
+      <url type="large">http://somewhere/18.jpg</url>
+    </urls>
+    <exif>
+      <make>MAKE 1</make>
+      <model>MAKE 1MODEL 1</model>
+    </exif>
+  </work>
+  <work>
+    <id>19</id>
+    <urls>
+      <url type="large">http://somewhere/19.jpg</url>
+    </urls>
+    <exif>
+      <make>MAKE 1</make>
+      <model></model>
+    </exif>
+  </work>
+  <work>
+    <id>20</id>
+    <urls>
+      <url type="large">http://somewhere/20.jpg</url>
+    </urls>
+    <exif>
+      <make></make>
+      <model>MODEL 1</model>
+    </exif>
+  </work>
+</works>
